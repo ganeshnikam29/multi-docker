@@ -7,7 +7,7 @@ services :
   - docker
 
 before_install:
-  - docker build -f ./client/Dockerfile.dev -t multi-doc
+  - docker build -f ./client/Dockerfile.dev  .
 
 script:
   - docker run multi-docker npm test -- --coverage
