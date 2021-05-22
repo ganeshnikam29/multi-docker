@@ -20,7 +20,7 @@ after_success:
   # Login into Docker CLI
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
   # Take those images and push them to docker hub
-  - docker tag  multi-client
+  - docker tag  multi-client ganesh/multi-client
   - docker push multi-client 
   - docker tag  multi-nginx
   - docker push multi-nginx
